@@ -1,3 +1,7 @@
+// Add the gif's rating
+
+
+
 $(document).ready(function() {
     // Create a variable to hold all of the button names
     var games = ["Fallout", "Skyrim", "Gears of War", "Dark Souls", "Bioshock", "Halo", "Dishonored", "God of War", "Zelda", "Pokemon", "The Last of Us", "Metro 2033"];
@@ -24,7 +28,7 @@ $(document).ready(function() {
               console.log(response);
               $("#gifArea").empty();
               for (var j = 0; j < response.data.length; j++) {
-                  $("#gifArea").append("<img src='" + response.data[j].images.fixed_height_still.url + "' data-still='" + response.data[j].images.fixed_height_still.url + "' data-animate='" + response.data[j].images.fixed_height.url + "' data-state='still' style='height: 200px; width: 200px;' class='gif' />");
+                  $("#gifArea").append("<div style='background-color: #35AAFF; float: left; margin-bottom: 2px; margin-right: 2px;'><h4>Rated: " + response.data[j].rating + "</h4><img src='" + response.data[j].images.fixed_height_still.url + "' data-still='" + response.data[j].images.fixed_height_still.url + "' data-animate='" + response.data[j].images.fixed_height.url + "' data-state='still' style='height: 200px; width: 200px;' class='gif' /></div>");
               }
           });
     })
@@ -57,6 +61,7 @@ $(document).ready(function() {
         // Re-render the games array buttons
         displayButtons();
 
+        // Clear the text field
         $("#addGameText").val("");
 
       });
