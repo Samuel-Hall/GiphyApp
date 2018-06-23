@@ -19,7 +19,7 @@ $(document).ready(function() {
     // Click the game buttons to add 10 gifs to the page
     $(document).on("click", ".game", function() {
         var buttonClick = $(this).attr("data-game").trim();
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + buttonClick + "&api_key=" + giphyAPIKey + "&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + buttonClick + "&api_key=" + giphyAPIKey + "&limit=10";
 
         $.ajax({
             url: queryURL,
