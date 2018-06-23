@@ -1,7 +1,3 @@
-// Add the gif's rating
-
-
-
 $(document).ready(function() {
     // Create a variable to hold all of the button names
     var games = ["Fallout", "Skyrim", "Gears of War", "Dark Souls", "Bioshock", "Halo", "Dishonored", "God of War", "Zelda", "Pokemon", "The Last of Us", "Metro 2033"];
